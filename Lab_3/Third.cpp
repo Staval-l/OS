@@ -8,7 +8,6 @@ void MyDraw(HWND h) {
     HBRUSH b_red = CreateSolidBrush(RGB(255, 0, 0));
     HBRUSH b_blue = CreateSolidBrush(RGB(0, 0, 255));
     HBRUSH b_white = CreateSolidBrush(RGB(255, 255, 255));
-    HBRUSH b_black = CreateSolidBrush(RGB(0, 0, 0));
     HBRUSH b_grey = CreateSolidBrush(RGB(190, 190, 190));
     HBRUSH b_yellow = CreateSolidBrush(RGB(255, 255, 0));
     HBRUSH b_orange = CreateSolidBrush(RGB(255, 102, 0));
@@ -57,9 +56,9 @@ void MyDraw(HWND h) {
     SelectObject(dc, b_yellow); Ellipse(dc, 625, 225, 700, 300); // Солнце
 
     DeleteObject(b_red); DeleteObject(b_blue); // удалить кисти
-    DeleteObject(b_white); DeleteObject(b_black); // удалить кисти
-    DeleteObject(b_grey); DeleteObject(b_yellow);
-    DeleteObject(b_orange); DeleteObject(b_dark_grey);
+    DeleteObject(b_white); DeleteObject(b_grey);
+    DeleteObject(b_yellow); DeleteObject(b_orange);
+    DeleteObject(b_dark_grey);
 
     ReleaseDC(h, dc); DeleteDC(dc); // освободить контекст
 }
