@@ -11,7 +11,6 @@ void MyDraw(HWND h) {
     HBRUSH b_grey = CreateSolidBrush(RGB(190, 190, 190));
     HBRUSH b_yellow = CreateSolidBrush(RGB(255, 255, 0));
     HBRUSH b_orange = CreateSolidBrush(RGB(255, 102, 0));
-    HBRUSH b_dark_grey = CreateSolidBrush(RGB(128, 128, 128));
 
     POINT pt_up[3] = { {350, 150}, {400, 50}, {450, 150} }; // Нос ракеты
     SelectObject(dc, b_red); Polygon(dc, pt_up, 3);
@@ -58,7 +57,6 @@ void MyDraw(HWND h) {
     DeleteObject(b_red); DeleteObject(b_blue); // удалить кисти
     DeleteObject(b_white); DeleteObject(b_grey);
     DeleteObject(b_yellow); DeleteObject(b_orange);
-    DeleteObject(b_dark_grey);
 
     ReleaseDC(h, dc); DeleteDC(dc); // освободить контекст
 }
